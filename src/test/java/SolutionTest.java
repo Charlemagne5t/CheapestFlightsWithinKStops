@@ -56,5 +56,32 @@ public class SolutionTest {
 
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void findCheapestPriceTest4() {
+        int n = 11;
+        int[][] flights = {
+                {0, 3, 3},
+                {3, 4, 3},
+                {4, 1, 3},
+                {0, 5, 1},
+                {5, 1, 100},
+                {0, 6, 2},
+                {6, 1, 100},
+                {0, 7, 1},
+                {7, 8, 1},
+                {8, 9, 1},
+                {9, 1, 1},
+                {1, 10, 1},
+                {10, 2, 1},
+                {1, 2, 100}
+        };
+        int src = 0;
+        int dst = 2;
+        int k = 4;
+        int expected = 11;
+        int actual = new Solution().findCheapestPrice(n, flights, src, dst, k);
+
+        Assert.assertEquals(expected, actual);
+    }
 
 }
